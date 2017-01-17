@@ -19,6 +19,35 @@ public class Main2ActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main2, container, false);
+        View layFrag2=inflater.inflate(R.layout.fragment_main2, container, false);
+
+        TextView text2= (TextView) layFrag2.findViewById(R.id.text2);
+
+        String str=getActivity().getIntent().getStringExtra("llamar");
+
+        text2.setText(str);
+
+        Button button2=(Button) layFrag2.findViewById(R.id.button2);
+
+        button2.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                Intent databack=new Intent();
+                databack.putExtra("llamar2","mensaje desde fragment2");
+
+
+
+                setResult(RESULT_OK,databack);
+                finish();
+
+
+            }
+
+
+        });
+
+        return layFrag2;
     }
+
+
 }
