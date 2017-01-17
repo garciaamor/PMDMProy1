@@ -33,7 +33,7 @@ public class Main2ActivityFragment extends Fragment {
 
             public void onClick(View v){
                 Intent databack=new Intent();
-                databack.putExtra("llamar2","mensaje desde fragment2");
+                databack.putExtra("llamar2","Mensaje desde fragment 2");
 
 
 

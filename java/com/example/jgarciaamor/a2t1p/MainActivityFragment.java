@@ -31,7 +31,7 @@ public class MainActivityFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent=new Intent(getActivity(),Main2Activity.class);
-                intent.putExtra("llamar","mensaje desde fragment");
+                intent.putExtra("llamar","Mensaje desde fragment");
                 startActivityForResult(intent,COD);
 
             }
